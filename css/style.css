@@ -47,7 +47,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    height: 100%;
+    height: 100vh;
 }
 
 /* -------------------------------- */
@@ -94,6 +94,10 @@ body {
 
 .password-box.error {
     animation: shake 0.35s;
+}
+
+.construction-img {
+    height: 500px;
 }
 
 /* -------------------------------- */
