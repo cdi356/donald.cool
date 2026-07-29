@@ -97,7 +97,8 @@ body {
 }
 
 .construction-img {
-    height: 500px;
+    max-height: 80vh;
+    max-width: 90vw;
 }
 
 /* -------------------------------- */
