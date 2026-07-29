@@ -97,8 +97,10 @@ body {
 }
 
 .construction-img {
+    display: block;
     max-height: 80vh;
     max-width: 90vw;
+    margin-inline: auto;
 }
 
 /* -------------------------------- */
