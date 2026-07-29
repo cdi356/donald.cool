@@ -3,9 +3,35 @@ const overlay = document.getElementById("overlay");
 const site = document.getElementById("site");
 const box = document.getElementById("password-box");
 const tabs = document.querySelectorAll(".tab");
+const content = document.getElementById("content");
+
+const pages = {
+    about: `
+        <h1>about</h1>
+        <p>
+            who i am and what i do
+        </p>
+    `,
+
+    music: `
+        <h1>music</h1>
+        <p>
+            my projects, production, and audio work
+        </p>
+    `,
+
+    cool: `
+        <h1>cool stuff</h1>
+        <p>
+            cars, tech, random things
+        </p>
+    `
+};
 
 // DO NOT RELEASE SITE WITHOUT SETTING TO FALSE
-const devMode = false;
+const devMode = true;
+
+document.getElementById("content").innerHTML = pages.about;
 
 password.addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
@@ -29,6 +55,9 @@ tabs.forEach(tab => {
 
         tab.classList.add("active");
 
+        const page = tab.dataset.page;
+
+        content.innerHTML = pages[page];
     });
 });
 

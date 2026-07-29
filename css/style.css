@@ -1,3 +1,10 @@
+:root {
+    --outer-edge: #f4d3ff;
+    --inner-edge: #000000;
+    --backing: #f594fa;
+    --title-bar: #fa67ff;
+}
+
 /* -------------------------------- */
 /*               Base               */
 /* -------------------------------- */
@@ -61,10 +68,12 @@ body {
     padding: 40px;
 
     flex: 1;
-    background: white;
+    background: var(--backing);
     border: 2px solid;
-    border-color: white black black black;
+    border-color: var(--outer-edge) var(--inner-edge) var(--inner-edge) var(--outer-edge);
     padding: 40px;
+
+    z-index: 1;
 }
 
 /* -------------------------------- */
@@ -121,13 +130,13 @@ body {
 }
 
 .window {
-    width: 800px;
-    height: 600px;
-    background: white;
+    width: 1200px;
+    height: 650px;
+    background: var(--backing);
 
     border-width: 2px;
     border-style: solid;
-    border-color: white black black white;
+    border-color: var(--outer-edge) var(--inner-edge) var(--inner-edge) var(--outer-edge);
     box-shadow:
             8px 8px 0px rgba(0,0,0,.4);
     display: flex;
@@ -136,7 +145,7 @@ body {
 
 .window-bar {
     height: 32px;
-    background: #c0c0c0;
+    background: var(--title-bar);
     border-bottom: 2px solid black;
     display: flex;
     align-items: center;
@@ -152,34 +161,39 @@ body {
     margin: auto;
     display: flex;
     flex-direction: column;
-
-
 }
 
 .tabs {
     height: 32px;
     background: transparent;
-    border-bottom: 2px solid black;
     display: flex;
     font-family: system-ui;
     font-weight: bold;
+
 }
 
 .tab {
     color: black;
     cursor: pointer;
 
-    background: #c0c0c0;
+    background: var(--backing);
 
     border: 2px solid;
 
-    border-color: white black black white;
+    border-color: var(--outer-edge) var(--inner-edge) transparent var(--outer-edge);
+
+    padding: 0 18px;
+
+    transform: translateY(2px);
+
+
 }
 
 .tab.active {
-    border-color: black white white black;
-    border-bottom-color: #c0c0c0;
-    transform: translateY(2px);
+    /*border-color: var(--outer-edge) var(--inner-edge) var(--inner-edge) var(--outer-edge);*/
+    border-bottom-color: var(--backing);
+    transform: translateY(-2px);
+    z-index: 2;
 }
 
 .window-buttons {
@@ -195,11 +209,11 @@ body {
     justify-content: center;
     align-items: center;
 
-    background: #c0c0c0;
+    background: var(--title-bar);
 
     border: 2px solid;
 
-    border-color: white black black white;
+    border-color: var(--outer-edge) black black var(--outer-edge);
 
     font-size: 14px;
     line-height: 1;
