@@ -98,8 +98,8 @@ body {
 
 .construction-img {
     display: block;
-    max-height: 80vh;
-    max-width: 90vw;
+    height: auto;
+    max-width: 100%;
     margin-inline: auto;
 }
 
