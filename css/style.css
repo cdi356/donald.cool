@@ -41,6 +41,15 @@ body {
     font-family: system-ui;
 }
 
+#site {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
 /* -------------------------------- */
 /*            Components            */
 /* -------------------------------- */
