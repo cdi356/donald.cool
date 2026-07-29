@@ -7,7 +7,7 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
-    background: #FFFFFF;
+    background: red;
 }
 
 /* -------------------------------- */
@@ -98,7 +98,7 @@ body {
 
 .construction-img {
     display: block;
-    max-height: 100%;
+    max-height: 60%;
     width: auto;
     margin-inline: auto;
 }
