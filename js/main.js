@@ -74,7 +74,7 @@ function unlock() {
 
         setTimeout(() => {
             overlay.style.visibility = "hidden";
-        }, 250);
+        }, 0);
 
         if (construction) {
             window.location.href = "construction.html";
