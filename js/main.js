@@ -72,6 +72,7 @@ function unlock() {
     if(input === "slipperysalami") {
         if (construction) {
             window.location.href = "construction.html";
+            return;
         }
 
         overlay.style.opacity = "0";
