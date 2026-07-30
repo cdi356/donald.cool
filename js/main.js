@@ -70,15 +70,15 @@ tabs.forEach(tab => {
 function unlock() {
     const input = password.value;
     if(input === "slipperysalami") {
+        if (construction) {
+            window.location.href = "construction.html";
+        }
+
         overlay.style.opacity = "0";
 
         setTimeout(() => {
             overlay.style.visibility = "hidden";
         }, 0);
-
-        if (construction) {
-            window.location.href = "construction.html";
-        }
     } else {
         password.select();
         box.classList.add("error");
